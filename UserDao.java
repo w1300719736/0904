@@ -20,6 +20,7 @@ import java.sql.SQLException;
 public class UserDao {
     QueryRunner qr = JdbcUtil.getQueryRunner();
     public User login(String username, String pwd){
+        int a = 0;
         User user = null;
         String sql = "select * from tb_user where username = ? and pwd = ?";
         System.out.println(username + " "+pwd);
